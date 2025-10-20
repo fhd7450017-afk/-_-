@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>سوق الحي</title>
+  <link rel="icon" href="./assets/logo.png" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <div id="splash" class="splash">
+    <img src="./assets/logo.png" alt="logo" />
+  </div>
+
+  <div id="app" class="container" style="display:none;">
+
+    <header class="header">
+      <div class="brand">
+        <img src="./assets/logo.png" alt="logo" class="brand-logo" />
+        <h1 class="title">سوق الحي</h1>
+      </div>
+
+      <div class="controls">
+        <button id="add-ad-btn" class="btn primary">+ إضافة إعلان</button>
+        <button id="lang-toggle" class="btn outline">EN</button>
+        <div id="auth-area"></div>
+      </div>
+    </header>
+
+    <div class="search-row">
+      <input id="search" type="search" placeholder="ابحث بالعنوان أو الوصف..." />
+      <select id="sortBy">
+        <option value="new">الأحدث</option>
+        <option value="old">الأقدم</option>
+      </select>
+    </div>
+
+    <main>
+      <div id="ads-list" class="ads-list">
+      </div>
+    </main>
+
+    <footer class="footer">© 2025 سوق الحي</footer>
+  </div>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="panel">
+      <h3 id="modal-title">إضافة إعلان</h3>
+      <input id="ad-title" placeholder="عنوان الإعلان" />
+      <textarea id="ad-desc" rows="5" placeholder="وصف الإعلان"></textarea>
+      <div class="modal-actions">
+        <button id="cancel-btn" class="btn outline">إلغاء</button>
+        <button id="save-btn" class="btn primary">نشر</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
